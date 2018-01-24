@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>puzzle cat</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $('img').click(function(){   //makes the img a click event
+                $(this).attr('temp', $(this).attr('src'));      //.attr will retrieve or set an attribute of an element.. ie: this source is clicked, the src is commited to the temp.
+                $(this).attr('src', $(this).attr('alt-src'));   // it then changes the src to alt-src
+                $(this).attr('alt-src', $(this).attr('temp'));  // click again and alt-src is replaced with the temp src we just created.
+            })
+
+        });         ///THIS ONE WAS HARD, for me atleast, JS and jQ is slow going for me, the solution sheet was the only way i figured it out. 
+
+
+</script>
+</head>
+<body>
+        <img src="cat0.png" alt-src="ninja0.png" temp=""> <br/>
+        <img src="cat1.png" alt-src="ninja1.png" temp=""> <br/>
+        <img src="cat2.png" alt-src="ninja2.png" temp=""> <br/>
+        <img src="cat3.png" alt-src="ninja3.png" temp=""> <br/>
+        <img src="cat4.png" alt-src="ninja4.png" temp=""> <br/>      <!--need to create a temp variable to hold the orginal img-->
+
+</div>
+</body>
+</html>
